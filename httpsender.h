@@ -45,11 +45,6 @@ public:
         emit statusChanged(status);
     }
 
-    QNetworkReply * reply;
-    QNetworkAccessManager * manager;
-    QHttpMultiPart * container;
-    QFile * file;
-
 public slots:
     /** Upload settings setters **/
     void setHost(QString const &host, int port)
@@ -104,9 +99,14 @@ protected:
     QString username;
     QString privateKey;
     QString uplimgVersion;
-    /** Paste specific **/
+    QFile * file;
+    /* Paste specific */
     QByteArray lang;
     QString langHR;
+    /* internal network objects */
+    QNetworkReply * reply;
+    QNetworkAccessManager * manager;
+    QHttpMultiPart * container;
 };
 
 #endif // HTTPSENDER_H
