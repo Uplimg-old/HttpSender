@@ -12,9 +12,7 @@ If you have contributed to this file, add your name to authors list.
 
 #include "httpsender.h"
 
-HttpSender::HttpSender() : reply(nullptr)
-{
-}
+HttpSender::HttpSender(){}
 
 HttpSender::Status HttpSender::sendFile()
 {
